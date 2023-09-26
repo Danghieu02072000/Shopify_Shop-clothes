@@ -1,0 +1,14 @@
+<h1>{{ product.title }}</h1>
+<p>{{ product.price | money }}</p>
+<div>{{ product.description }}</div>
+<img src="{{product.featured_image | image_url: width: 400 }}" alt="">
+{% form 'product', product %}
+  <select name="id" id="">
+    {% for vari in product.variants %}
+      <option value="{{vari.id}}">
+        {{ vari.title }}
+      </option>
+    {% endfor %}
+  </select>
+  <button type="submit">Add to cart</button>
+{% endform %}
