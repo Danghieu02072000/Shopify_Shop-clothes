@@ -9,13 +9,14 @@
       <h3>
         {{ item.price | money }}</h3>
         <p>Number item: {{ item.quantity }}
-        <input name="update[]" value="{{ item.quantity }}">
+        <input name="updates[]" value="{{ item.quantity }}">
         <a href="{{ item.url_to_remove }}">Remove</a>
     </div>
   {% endfor %}
   <hr/>
-  <p>Number item: {{ cart.item_count }}
+  <p>Number item: {{ cart.item_count | money }}
   </p>
   <p>Total: {{ cart.total_price | money }}</p>
-  <button type="submit">Checkout</button>
+  <button type="submit" name="update">Update</button>
+  <button type="submit" name="checkout">Checkout</button>
 {% endform %}
