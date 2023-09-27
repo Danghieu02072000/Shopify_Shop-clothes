@@ -1,0 +1,38 @@
+<header class="header">
+  {{ shop.name }}
+  <h1>Coding with me</h1>
+  <ul>
+    {% for link in linklists.main-menu.links -%}
+      <li>
+        {{ link.title | link_to: link.url }}
+      </li>
+    {%- endfor %}
+  </ul>
+
+</header>
+{% style %}
+    .header {
+      background: {{ section.settings.bg}};
+      padding: 100px;
+    }
+{% endstyle %}
+
+{% stylesheet %}
+    .header {
+
+    }
+{% endstylesheet %}
+
+{% schema %}
+  {
+    "name": "header",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg",
+        "label": "BG color",
+        "default": "#000"
+      }
+    ]
+  }
+{% endschema %}

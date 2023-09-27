@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "main" : {
+      "type" : "not_found1"
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

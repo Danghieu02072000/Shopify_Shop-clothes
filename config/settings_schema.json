@@ -1,0 +1,19 @@
+[
+  {
+    "name" : "colors",
+    "settings" : [
+      {
+        "type": "color",
+        "id" : "bg",
+        "label" : "background-color",
+        "default" : "#fff"
+      },
+      {
+        "type": "color",
+        "id" : "text",
+        "label" : "text-color",
+        "default" : "#000"
+      }
+    ]
+  }
+]
