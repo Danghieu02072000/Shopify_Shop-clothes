@@ -1,4 +1,8 @@
 {% form 'cart', cart %}
+
+{% if cart.empty? %} 
+  <h3> Your Cart is Empty</h3>
+{% else  %}
   <h2>Cart Hieu</h2>
   {% for item in cart.items %}
     <div>
@@ -13,10 +17,14 @@
         <a href="{{ item.url_to_remove }}">Remove</a>
     </div>
   {% endfor %}
+
   <hr/>
-  <p>Number item: {{ cart.item_count | money }}
+  <p>Number item: {{ cart.item_count  }}
   </p>
   <p>Total: {{ cart.total_price | money }}</p>
+
   <button type="submit" name="update">Update</button>
+
   <button type="submit" name="checkout">Checkout</button>
+{% endif %}
 {% endform %}
